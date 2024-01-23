@@ -1,0 +1,23 @@
+header{height: 70px;
+    width: 100%;
+    position: sticky;
+    position: fixed;
+    font-family: majormono;
+    background-color: $colorhyf;
+    z-index: 1;
+
+   
+    
+        .navbar-nav{
+            font-size: large;
+            margin-left: 120vh;}
+        
+            .navbar-brand{
+                font-size:xx-large;
+                padding-left: 1rem;
+            }
+           
+            a{text-decoration: none;
+                color: black;
+                }
+}

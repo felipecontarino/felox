@@ -1,0 +1,76 @@
+.mainmusic{
+   
+    background-image:url(../img/Captura\ de\ pantalla\ 2021-10-22\ a\ las\ 2.55.54\ p.m..png);
+    height: 47rem;
+    
+    .contenedormusic {
+        padding-top: 50px;
+         padding-left: 680px;
+         
+          width: 1200px;
+          height: 600px;
+              display: grid;
+              grid-template-columns:1fr 1fr ;
+              grid-template-rows: 1fr 1fr 1fr 1fr;
+              grid-template-areas: 
+          
+              ". ."
+              "discos1 discos2"
+              ". .";
+             
+              h4{font-family: majormono;
+                margin-top: 20px;
+            
+            padding: 6px;
+            background-color: rgb(221, 232, 232);
+            padding-left: 32px;
+            padding-right: 10px;
+        
+            border-radius: 10px;
+        }
+              .discos1{
+                height: 150px;
+                width: 150px;
+                
+                
+                 background-color:rgb(228, 232, 234);
+                 border-radius: 10px;
+                 grid-area: discos1;
+
+                 .imghabitat{
+                    width: 100%;
+                
+                    height: 100%;
+                    border-radius: 5px;
+                    
+                }
+
+                .titulohabitat{
+                    font-size:medium;
+                }
+                 }
+
+                 .discos2{
+                    height: 150px;
+                    width: 150px;
+                    
+                    
+                     background-color:rgb(228, 232, 234);
+                     border-radius: 10px;
+                     grid-area: discos2;
+
+                     .imghabitat{
+                        width: 100%;
+                    
+                        height: 100%;
+                        border-radius: 5px;
+                        
+                    }
+                    
+                     .tituloaurora{
+                        padding-left: 39px;
+                        font-size: medium;
+                     }}
+            }
+
+}
