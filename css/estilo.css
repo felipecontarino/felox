@@ -117,8 +117,8 @@ header a {
 }
 
 .divwatch {
-  display: flex;
-  padding-block: 80px;
+  padding-top: 90px;
+  padding-bottom: 20px;
 }
 
 .titulo {
