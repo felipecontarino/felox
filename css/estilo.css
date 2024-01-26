@@ -16,22 +16,44 @@ header {
   height: 70px;
   width: 100%;
   position: sticky;
-  position: fixed;
   font-family: majormono;
   background-color: aliceblue;
   z-index: 1;
 }
 header .navbar-nav {
   font-size: large;
-  margin-left: 120vh;
+  margin-left: 110vh;
+}
+@media screen and (max-width: 1220px) {
+  header .navbar-nav {
+    margin-left: 72vh;
+  }
+}
+@media screen and (max-width: 1220px) and (max-width: 991px) {
+  header .navbar-nav {
+    margin-left: 0vh;
+  }
 }
 header .navbar-brand {
   font-size: xx-large;
   padding-left: 1rem;
 }
+@media screen and (max-width: 991px) {
+  header .navbar-brand {
+    padding-left: 1rem;
+  }
+}
 header a {
   text-decoration: none;
   color: black;
+}
+header .nav-link:hover {
+  transform: scale(1.06);
+  background-color: rgb(234, 206, 225);
+}
+
+.navbar-brand:hover {
+  transform: scale(1.1);
 }
 
 .divlist {
@@ -42,38 +64,94 @@ header a {
   padding-top: 120px;
   padding-left: 70px;
 }
+.divlist .divlist:hover {
+  transform: scale(1, 1);
+  transition: 1s;
+}
+@media screen and (max-width: 560px) {
+  .divlist {
+    display: none;
+    padding: 0px;
+  }
+}
 .divlist .ullist {
   list-style: none;
   padding-inline: 10px;
   display: flex;
   display: list-item;
 }
+@media screen and (max-width: 560px) {
+  .divlist .ullist {
+    display: none;
+  }
+}
 .divlist .ullist .lilist {
   display: flex;
 }
+@media screen and (max-width: 560px) {
+  .divlist .ullist .lilist {
+    display: none;
+  }
+}
 
 .divindex {
-  width: 110%;
+  width: 100%;
   height: 63rem;
   background-image: url(../img/tapa\ ESTA.jpg);
   background-size: 85%;
   background-position: 170px;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 991px) {
+  .divindex {
+    background-size: 100%;
+    background-position: 0px;
+    background-position-x: center;
+    background-position-y: top;
+    height: 55rem;
+  }
+}
+@media screen and (max-width: 560px) {
+  .divindex {
+    height: 30rem;
+  }
+}
 
 .mainmusic {
   background-image: url(../img/Captura\ de\ pantalla\ 2021-10-22\ a\ las\ 2.55.54\ p.m..png);
-  height: 47rem;
+  height: 45rem;
+  width: 100%;
+  background-position-y: -40px;
 }
 .mainmusic .contenedormusic {
-  padding-top: 50px;
-  padding-left: 680px;
-  width: 1200px;
-  height: 600px;
+  padding-left: 600px;
+  background-position-y: top;
+  width: 100%;
+  height: 700px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas: ". ." "discos1 discos2" ". .";
+}
+@media screen and (max-width: 1220px) {
+  .mainmusic .contenedormusic {
+    padding-left: 300px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .mainmusic .contenedormusic {
+    padding-left: 135px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .mainmusic .contenedormusic {
+    padding-left: 120px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "discos1" "discos2";
+    height: 450px;
+    padding-top: 50px;
+  }
 }
 .mainmusic .contenedormusic h4 {
   font-family: majormono;
@@ -83,6 +161,10 @@ header a {
   padding-left: 32px;
   padding-right: 10px;
   border-radius: 10px;
+}
+.mainmusic .contenedormusic h4 a {
+  text-decoration: none;
+  color: black;
 }
 .mainmusic .contenedormusic .discos1 {
   height: 150px;
@@ -117,8 +199,21 @@ header a {
 }
 
 .divwatch {
-  padding-top: 90px;
+  padding-top: 20px;
   padding-bottom: 20px;
+}
+.divwatch .videoresponsive {
+  overflow: hidden;
+  padding-bottom: 600px;
+  position: relative;
+  height: 0;
+}
+.divwatch iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .titulo {
@@ -132,6 +227,19 @@ h2 {
   margin-top: 100px;
 }
 
+.roll-in-left {
+  animation: roll-in-left 0.6s ease-out both;
+}
+@keyframes roll-in-left {
+  0% {
+    transform: translateX(-800px) rotate(-540deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
 .section1 {
   height: 1000px;
   background-size: 200vh;
@@ -142,10 +250,21 @@ h2 {
 }
 .section1 .parrafo {
   padding: 7vh;
-  background-color: rgba(233, 227, 222, 0.806);
-  border-radius: 15px;
+  background: rgb(0, 0, 0);
+  background: rgb(217, 210, 210);
+  background: linear-gradient(323deg, rgb(217, 210, 210) 13%, rgb(219, 198, 202) 36%, rgb(252, 252, 252) 100%);
+  background: rgb(242, 240, 240);
+  background: linear-gradient(323deg, rgb(242, 240, 240) 13%, rgb(227, 216, 218) 36%, rgb(252, 252, 252) 100%);
+  border-color: black;
+  border-radius: 20px;
+  border-style: inset;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   font-family: majormono;
+  font-weight: 800;
   margin-top: 100px;
+}
+.section1 .parrafo:hover {
+  transform: scale(1.2);
 }
 
 footer {
