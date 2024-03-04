@@ -1,21 +1,72 @@
-.divwatch{
+
+.watchtitulo{
+    font-family: "majormono";
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-decoration:overline;
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     
+}
+
+.video1{
+  margin-top: 30px;
+  background-color: rgb(234, 206, 225);
+  
+}
+
+.video2{
+  margin-top: 30px;
+  background-color: aliceblue;
+  text-align: center;
+
+}
+.divwatch{
+    display: flex;
     padding-top: 20px;
     padding-bottom: 20px;
+    justify-content: center;
     
     .videoresponsive {
             overflow:hidden;
-            padding-bottom:600px; 
+          
             position:relative;
-            height:0;}
+            height:0;
+        max-width: 100%;}
             
-            iframe{
+            .iframe{
                 left:0;
                 top:0;
                 height:100%;
-                width:100%;
-                position:absolute;
+                width: 100%;
+                position: absolute;
+               
+               
             }
         
   
 }
+
+
+@-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }

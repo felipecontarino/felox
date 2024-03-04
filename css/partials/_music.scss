@@ -40,8 +40,9 @@
                 "discos1"
                 "discos2";
 
-                height: 450px;
-                padding-top: 50px;
+                height: 550px;
+                padding-top: 130px;
+                
               }
              
               h4{font-family: majormono;
@@ -53,6 +54,7 @@
             padding-right: 10px;
         
             border-radius: 10px;
+            
             a{text-decoration: none;
                 color: black;
                 }
@@ -106,3 +108,18 @@
             }
 
 }
+
+.tituloaurora:hover{
+
+  transform: scale(1.06);
+  text-decoration:underline;
+}
+.titulohabitat:hover{
+  transform: scale(1.06);
+  text-decoration:underline;}
+
+  .discos1:hover{
+transform: scale(1.06);}
+
+.discos2:hover{
+transform: scale(1.06);}

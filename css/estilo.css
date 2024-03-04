@@ -96,10 +96,11 @@ header .nav-link:hover {
 
 .divindex {
   width: 100%;
-  height: 63rem;
+  height: 53rem;
   background-image: url(../img/tapa\ ESTA.jpg);
   background-size: 85%;
   background-position: 170px;
+  background-position-y: -190px;
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 991px) {
@@ -107,13 +108,15 @@ header .nav-link:hover {
     background-size: 100%;
     background-position: 0px;
     background-position-x: center;
-    background-position-y: top;
-    height: 55rem;
+    background-position-y: -150px;
+    height: 35rem;
   }
 }
 @media screen and (max-width: 560px) {
   .divindex {
+    background-position: center;
     height: 30rem;
+    background-size: 120%;
   }
 }
 
@@ -149,8 +152,8 @@ header .nav-link:hover {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "discos1" "discos2";
-    height: 450px;
-    padding-top: 50px;
+    height: 550px;
+    padding-top: 130px;
   }
 }
 .mainmusic .contenedormusic h4 {
@@ -198,75 +201,210 @@ header .nav-link:hover {
   font-size: medium;
 }
 
+.tituloaurora:hover {
+  transform: scale(1.06);
+  text-decoration: underline;
+}
+
+.titulohabitat:hover {
+  transform: scale(1.06);
+  text-decoration: underline;
+}
+
+.discos1:hover {
+  transform: scale(1.06);
+}
+
+.discos2:hover {
+  transform: scale(1.06);
+}
+
+.watchtitulo {
+  font-family: "majormono";
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  text-decoration: overline;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.video1 {
+  margin-top: 30px;
+  background-color: rgb(234, 206, 225);
+}
+
+.video2 {
+  margin-top: 30px;
+  background-color: aliceblue;
+  text-align: center;
+}
+
 .divwatch {
+  display: flex;
   padding-top: 20px;
   padding-bottom: 20px;
+  justify-content: center;
 }
 .divwatch .videoresponsive {
   overflow: hidden;
-  padding-bottom: 600px;
   position: relative;
   height: 0;
+  max-width: 100%;
 }
-.divwatch iframe {
+.divwatch .iframe {
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
   position: absolute;
 }
-
-.titulo {
-  font-family: majormono;
-  padding: 10vh;
-  text-align: center;
-}
-
-h2 {
-  font-family: majormono;
-  margin-top: 100px;
-}
-
-.roll-in-left {
-  animation: roll-in-left 0.6s ease-out both;
-}
-@keyframes roll-in-left {
+@keyframes scale-up-center {
   0% {
-    transform: translateX(-800px) rotate(-540deg);
-    opacity: 0;
+    transform: scale(0.5);
   }
   100% {
-    transform: translateX(0) rotate(0deg);
-    opacity: 1;
+    transform: scale(1);
   }
 }
-.section1 {
-  height: 1000px;
-  background-size: 200vh;
-  background-position: center;
+.contenedortour {
+  background-image: url(/img/tapa\ ESTA.jpg);
+  background-position-y: -260px;
+  background-position-x: center;
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-position-y: -120vh;
-  background-image: url(/img/1filo.jpg);
+  max-width: 100%;
 }
-.section1 .parrafo {
-  padding: 7vh;
-  background: rgb(0, 0, 0);
-  background: rgb(217, 210, 210);
-  background: linear-gradient(323deg, rgb(217, 210, 210) 13%, rgb(219, 198, 202) 36%, rgb(252, 252, 252) 100%);
-  background: rgb(242, 240, 240);
-  background: linear-gradient(323deg, rgb(242, 240, 240) 13%, rgb(227, 216, 218) 36%, rgb(252, 252, 252) 100%);
-  border-color: black;
-  border-radius: 20px;
-  border-style: inset;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-  font-family: majormono;
-  font-weight: 800;
-  margin-top: 100px;
+.contenedortour .tourbody {
+  width: 100%;
+  height: 920px;
 }
-.section1 .parrafo:hover {
-  transform: scale(1.2);
+.contenedortour .tourtitulo {
+  font-family: "majormono";
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.contenedortour .h22 {
+  text-decoration: none;
+  margin-top: 25px;
+  color: black;
+  border: solid #002;
+  border-width: 1px;
+  padding: 8px;
+}
+.contenedortour .fechas {
+  display: flex;
+  width: 100%;
+  margin-top: 120px;
+  justify-content: center;
+}
+.contenedortour .fechas .cuadros {
+  font-family: "majormono";
+  color: black;
+  padding: 20px;
+  border-radius: 5px;
+  border: solid;
+  border-color: #002;
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 80px;
+  margin: 50px;
+  background: rgb(66, 59, 59);
+  background: linear-gradient(295deg, rgb(255, 255, 255) 14%, rgb(217, 217, 217) 47%, rgb(255, 255, 255) 69%);
+}
+.contenedortour .fechas .h61 {
+  text-overflow: ellipsis;
+  text-decoration: underline;
+  padding: 1px;
 }
 
+@media screen and (max-width: 991px) {
+  .contenedortour {
+    background-size: 150%;
+    height: auto;
+  }
+  .tourtitulo {
+    padding-top: 45px;
+  }
+  .fechas {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 560px) {
+  .contenedortour {
+    background-size: 210%;
+    background-position: center;
+  }
+  .contenedortour .tourbody {
+    height: auto;
+  }
+  .contenedortour .tourbody .fechas {
+    margin-top: 30px;
+  }
+  .contenedortour .tourbody .cuadros {
+    margin: 20px;
+    margin-bottom: 50px;
+  }
+}
+.cuadros:hover {
+  transform: scale(1.06);
+}
+
+.tarjeta {
+  margin-bottom: 1px;
+  background-color: rgb(242, 245, 248);
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "parrafo img";
+  background: rgb(242, 242, 242);
+  background: linear-gradient(309deg, rgb(242, 242, 242) 25%, rgb(249, 249, 249) 69%, rgb(224, 224, 224) 80%);
+}
+.tarjeta .parrafo {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  margin-left: 25px;
+  margin-right: 25px;
+  grid-area: parrafo;
+  font-family: "majormono";
+  height: auto;
+  padding: 25px;
+}
+.tarjeta .img {
+  grid-area: img;
+}
+.tarjeta .imgreal {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 991px) {
+  .tarjeta {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "parrafo" "img";
+    margin-top: 40px;
+  }
+  .tarjeta .parrafo {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .tarjeta {
+    margin-top: 0px;
+  }
+}
 footer {
   height: 50px;
   width: 100%;

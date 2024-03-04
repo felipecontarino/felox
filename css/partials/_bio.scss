@@ -1,29 +1,58 @@
 
 
-.section1{
-    height: 1000px;
-     background-size: 200vh;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-position-y: -120vh;
-  
-    background-image: url(/img/1filo.jpg);
 
-    .parrafo{
-        padding: 7vh;
-        background: rgb(0,0,0);
-       background: rgb(217,210,210);
-background: linear-gradient(323deg, rgba(217,210,210,1) 13%, rgba(219,198,202,1) 36%, rgba(252,252,252,1) 100%);background: rgb(242,240,240);
-background: linear-gradient(323deg, rgba(242,240,240,1) 13%, rgba(227,216,218,1) 36%, rgba(252,252,252,1) 100%);
-        border-color: black;
-        border-radius: 20px;
-        border-style:inset;
-        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-    font-family: majormono;
-    font-weight: 800;
-margin-top: 100px;}
 
- .parrafo:hover {
-    transform: scale(1.2);
- }
+    .tarjeta{
+       margin-bottom: 1px;
+        background-color:rgb(242, 245, 248);
+        width: 100%;
+       height: auto;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:  1fr;
+        grid-template-areas: 
+
+        "parrafo img";
+        background: rgb(242,242,242);
+background: linear-gradient(309deg, rgba(242,242,242,1) 25%, rgba(249,249,249,1) 69%, rgba(224,224,224,1) 80%);
+        
+
+.parrafo{margin-top: 100px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    grid-area: parrafo;
+    font-family:"majormono";
+    height: auto;
+padding: 25px;
+
 }
+
+.img{grid-area: img;
+}
+
+.imgreal{width:100%;
+    max-width: 100%;
+    height: auto;
+    }}
+     
+    @include tablet {
+        
+        .tarjeta{grid-template-columns:1fr;
+                grid-template-rows: 1fr;
+                grid-template-areas: 
+        "parrafo"
+        "img";
+     margin-top: 40px;
+    
+        .parrafo{ margin-top:50px;}
+        }}
+
+        @include mobile {
+            .tarjeta{ margin-top: 0px;}
+
+    }
+    
+    
+
