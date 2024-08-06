@@ -4,7 +4,8 @@
     height: 45rem;
     width: 100%;
     background-position-y: -40px;
-   
+
+    
     
     .contenedormusic {
         
@@ -33,7 +34,8 @@
               }
               @include mobile {
 
-                padding-left: 120px;
+                padding-left: 0px;
+                justify-items: center;
                 grid-template-columns:1fr;
                 grid-template-rows: 1fr;
                 grid-template-areas: 
@@ -47,11 +49,9 @@
              
               h4{font-family: majormono;
                 margin-top: 20px;
-            
-            padding: 6px;
-            background-color: rgb(221, 232, 232);
-            padding-left: 32px;
-            padding-right: 10px;
+                padding: 6px;
+                background-color: rgb(221, 232, 232);
+           
         
             border-radius: 10px;
             
@@ -60,14 +60,17 @@
                 }
         }
               .discos1{
-                height: 150px;
-                width: 150px;
+                height: 200px;
+                width: 200px;
                 
                 
                 
                  background-color:rgb(228, 232, 234);
                  border-radius: 10px;
                  grid-area: discos1;
+
+                 @include mobile{ height: 150px;
+                 width: 150px;}
 
                  .imghabitat{
                     width: 100%;
@@ -79,18 +82,22 @@
 
                 .titulohabitat{
                     font-size:medium;
+                    text-align: center;
                     
                 }
                  }
 
                  .discos2{
-                    height: 150px;
-                    width: 150px;
+                    height: 200px;
+                    width: 200px;
                     
                     
                      background-color:rgb(228, 232, 234);
                      border-radius: 10px;
                      grid-area: discos2;
+
+                      @include mobile{ height: 150px;
+                 width: 150px;}
 
                      .imghabitat{
                         width: 100%;
@@ -101,7 +108,7 @@
                     }
                     
                      .tituloaurora{
-                        padding-left: 39px;
+                       text-align: center;
                         font-size: medium;
                         
                      }}
@@ -112,14 +119,17 @@
 .tituloaurora:hover{
 
   transform: scale(1.06);
-  text-decoration:underline;
+  transition: transform 2s;
 }
 .titulohabitat:hover{
   transform: scale(1.06);
-  text-decoration:underline;}
+  transition: transform 2s;
+  }
 
   .discos1:hover{
-transform: scale(1.06);}
+transform: scale(1.06);
+transition: transform 0.5s;}
 
 .discos2:hover{
-transform: scale(1.06);}
+transform: scale(1.06);
+transition: transform 0.5s;}
