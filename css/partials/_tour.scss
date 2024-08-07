@@ -1,11 +1,7 @@
 
 .contenedortour{
 padding-top: 75px;
-    background-image: url(../img/tapa\ ESTA.jpg);
-    background-position-y: -260px;
-    background-position-x: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
+   
     max-width: 100%;
 
 
@@ -40,7 +36,7 @@ padding: 8px;}
         color: black;
         padding: 20px;
         border-radius: 5px;
-        border: solid;
+        border: none;
         border-color: #002;
         border-width: 1px;
       
@@ -53,8 +49,8 @@ padding: 8px;}
         width: 350px;
         height: 80px;
        margin: 50px;
-       background: rgb(66, 59, 59);
-       background: linear-gradient(295deg, rgba(255,255,255,1) 14%, rgba(217,217,217,1) 47%, rgba(255,255,255,1) 69%);}
+       background: rgb(255, 255, 255);
+       }
        
 
        .h61{
